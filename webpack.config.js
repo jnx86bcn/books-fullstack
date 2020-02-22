@@ -6,10 +6,10 @@ const devMode = process.env.NODE_ENV !== 'production';
 
 module.exports = {
 
-    entry: './app.js',
+    entry: './client/app.js',
 
     output: {
-        path: path.join(__dirname, '/server/public'),
+        path: path.join(__dirname, './server/public'),
         filename: 'js/bundle.js'
     },
 
@@ -33,7 +33,7 @@ module.exports = {
 
     plugins: [
         new HtmlWebpackPlugin({
-            template: 'index.html',
+            template: 'client/index.html',
             minify: {
                 collapseWhitespace: true,
                 removeComments: true,
