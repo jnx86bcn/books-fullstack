@@ -5,7 +5,7 @@ connect();
 //connect db
 async function connect() {
     try{
-        await mongoose.connect(process.env.MONGODB_URI,{
+        await mongoose.connect("mongodb+srv://admin:1234@cluster0-5mgk3.azure.mongodb.net/test?retryWrites=true&w=majority",{
             useNewUrlParser:true,    
             useUnifiedTopology: true
         });
