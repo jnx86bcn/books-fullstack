@@ -4,11 +4,11 @@
   "description": "A complete curse on backend and front services with mongodb",
   "main": "index.js",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development nodemon /server/index.js --ignore client",
+    "dev": "cross-env NODE_ENV=development nodemon ./server/index.js --ignore client",
     "server:dev": "webpack-dev-server",
     "postinstall": "npm run build",
     "build": "cross-env NODE_ENV=production webpack",
-    "start": "cross-env NODE_ENV=production nodemon /server/index.js"
+    "start": "cross-env NODE_ENV=production nodemon ./server/index.js"
   },
   "keywords": [
     "fullstack",
