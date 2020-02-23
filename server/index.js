@@ -13,7 +13,7 @@ require('./database');
 const routes_books = require('./routes/routes_books');
 
 //Settings server
-app.set('port',process.env.PORT||8080);
+app.set('port',process.env.PORT||3000);
 
 //Pre-configurations middlewares
 const storage = multer.diskStorage({
