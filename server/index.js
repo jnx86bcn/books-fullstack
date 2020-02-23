@@ -2,7 +2,6 @@ const devMode = process.env.NODE_ENV !== 'production';
 if(devMode) {
     require('dotenv').config();//read .env file for dev enviroment
 }
-console.log(devMode+"__indexServer");
 const express = require('express');//server package
 const morgan = require('morgan');//show petitions from server on cmd
 const multer = require('multer');//help for upload images on server;
