@@ -1,5 +1,7 @@
 const mongoose = require('mongoose');
 
+const devMode = process.env.NODE_ENV !== 'production';
+
 connect();
 
 //connect db
