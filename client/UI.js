@@ -31,7 +31,7 @@ class UI {
                 </div>
             </div>
             `;
-            booksCardContainer.appendChild(div);
+            booksCardContainer.appendChild(div); 
         });
     }
 

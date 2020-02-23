@@ -6,7 +6,7 @@ const devMode = process.env.NODE_ENV !== 'production';
 
 module.exports = {
 
-    entry: './client/app.js',
+    entry: './client/app.js', 
 
     output: {
         path: path.join(__dirname, 'server/public'),
