@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const devMode = process.env.NODE_ENV !== 'production';
-
+console.log(devMode + "__entorno")
 module.exports = {
 
     entry: './client/app.js', 
@@ -18,7 +18,7 @@ module.exports = {
             {
                 test: /\.css/,
                 use: [
-                    devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
+                    devMode == true ? 'style-loader':MiniCssExtractPlugin.loader,
                     'css-loader'
                 ]
             }
