@@ -10,7 +10,6 @@ const cors = require('cors');//allow connection between different ports front-ba
 //Initializations
 const app = express();
 require('./database');
-const routes_books = require('./routes/routes_books');
 
 //Settings server
 app.set('port',process.env.PORT||3000);
@@ -25,18 +24,19 @@ const storage = multer.diskStorage({
 
 // Middlewares
 app.use(morgan('dev'));
+app.use(cors());//communications between 2 servers
 app.use(multer({storage}).single('image'));
 app.use(express.urlencoded({extended: false}));//handle form type
 app.use(express.json());//handle json files
-app.use(cors());//communications between 2 servers
+
 
 //Routes
-app.use('/api/books',routes_books);
+app.use('/api/books',require('./routes/routes_books'));
 
 //Static files
 app.use(express.static(path.join(__dirname,'public')));
 
 //Start server
 app.listen(app.get('port'),()=>{
-    console.log('Server on port',app.get('port'));
+    console.log(`Server on port ${app.get('port')}`);
 });

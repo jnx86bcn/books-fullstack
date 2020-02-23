@@ -4,7 +4,7 @@ const BookSchema = new Schema({
     title: {type: String, required: true},
     author: {type: String, required: true},
     isbn: {type: String, required: true},
-    coverPath: {type: String, required: false},
+    coverPath: {type: String, required: true},
     created: {type: Date, required: true, default: Date.now}
 });
 

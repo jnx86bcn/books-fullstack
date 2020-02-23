@@ -4,21 +4,10 @@
   "description": "A complete curse on backend and front services with mongodb",
   "main": "index.js",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development nodemon server/index.js --ignore client",
-    "start": "cross-env NODE_ENV=production nodemon server/index.js"
+    "dev": "cross-env NODE_ENV=development nodemon /server/index.js --ignore client",
+    "start": "cross-env NODE_ENV=production nodemon /server/index.js"
   },
-  "keywords": [
-    "fullstack",
-    "backend",
-    "mongodb",
-    "express",
-    "mongoose",
-    "multer",
-    "javascript",
-    "frontend",
-    "css",
-    "html"
-  ],
+  "keywords": [],
   "author": "jnx86bcn",
   "license": "ISC",
   "dependencies": {

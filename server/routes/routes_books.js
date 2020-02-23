@@ -21,7 +21,7 @@ router.post('/',async (req,res)=>{
 //delete
 router.delete('/:Id',async (req,res)=>{
     const book = await Book.findOneAndDelete(req.params.Id);
-    unlink(path.resolve('./public'+book.coverPath));
+    await unlink(path.resolve('./public'+book.coverPath));
     res.json({"message": "Book deleted"});
 });
 module.exports = router;
